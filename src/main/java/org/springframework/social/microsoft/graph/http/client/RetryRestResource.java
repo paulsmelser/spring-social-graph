@@ -7,7 +7,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.social.microsoft.azure.http.client.retry.RetryService;
+import org.springframework.social.microsoft.graph.http.client.retry.RetryService;
 import org.springframework.web.client.RestTemplate;
 
 public class RetryRestResource extends RestResource {

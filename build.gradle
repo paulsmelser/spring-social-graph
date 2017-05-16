@@ -87,11 +87,11 @@ publishing {
 		mavenJava(MavenPublication) {
 			version scmVersion.version
 			groupId group
-			artifactId 'spring-social-microsoft-azure'
+			artifactId 'spring-social-microsoft-graph'
 			pom.withXml {
 				asNode().children().last() + {
 					resolveStrategy = Closure.DELEGATE_FIRST
-					name 'spring-social-microsoft-azure'
+					name 'spring-social-microsoft-graph'
 					description 'A provider extension for Spring Social to enable connectivity with Microsoft and an API binding for Microsoft\'s Graph API.'
 					url "https://github.com/SpringSocialMicrosoft/spring-social-graph"
 					scm {
@@ -121,6 +121,6 @@ publishing {
 	}
 	repositories{
 		maven {
-			url "https://dl.bintray.com/springsocialmicrosoft/azure-management/" }
+			url "https://dl.bintray.com/springsocialmicrosoft/spring-social-microsoft-graph" }
 	}
 }

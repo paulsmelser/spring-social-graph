@@ -6,23 +6,23 @@ import java.util.List;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.social.microsoft.azure.http.AzureHttpHeaders;
 import org.springframework.web.util.UriComponentsBuilder;
 
 public class HttpRequestBuilder {
-	private AzureHttpHeaders headers;
+	private HttpHeaders headers;
 	private RestResource restResource;
 	private UriComponentsBuilder uriBuilder;
 
 	HttpRequestBuilder(RestResource restResource, String resourceBaseUri, String msRequestId, String msCorrelationId){
-		this.headers = new AzureHttpHeaders();
+		this.headers = new HttpHeaders();
 		this.restResource = restResource;
 		this.uriBuilder = UriComponentsBuilder.fromUriString(resourceBaseUri);
 	}
 
 	HttpRequestBuilder(RestResource restResource, String resourceBaseUri){
-		this.headers = new AzureHttpHeaders();
+		this.headers = new HttpHeaders();
 		this.restResource = restResource;
 		this.uriBuilder = UriComponentsBuilder.fromUriString(resourceBaseUri);
 	}
